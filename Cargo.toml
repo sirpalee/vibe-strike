@@ -8,3 +8,4 @@ author = "Pal Mezei <sirpalee@gmail.com>"
 
 [dependencies]
 winit = "0.28.3"
+wgpu = "0.15.1"
