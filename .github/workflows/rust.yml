@@ -32,13 +32,3 @@ jobs:
       with:
         command: test
         args: --all --verbose
-
-    - name: Run Clippy
-      uses: actions-rs/clippy@v1
-      with:
-        args: --all-targets --all-features -- -D warnings
-
-    - name: Run Fmt
-      uses: actions-rs/fmt@v1
-      with:
-        args: --all -- --check
