@@ -1,0 +1,6 @@
+[book]
+authors = ["Pal Mezei"]
+language = "en"
+multilingual = false
+src = "src"
+title = "AI Strike Design Document"
