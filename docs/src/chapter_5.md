@@ -1,0 +1,1 @@
+# Visual and Art Style
