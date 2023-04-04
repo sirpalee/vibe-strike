@@ -13,4 +13,4 @@ In addition to the thrilling gameplay mechanics, `AI Strike` features a compelli
 The target audience for `AI Strike` consists of action and shooter game enthusiasts, particularly those who enjoy twin-stick shooters and military-themed games. Players who appreciate fast-paced, strategic gameplay with a focus on skill development and tactical decision-making will find `AI Strike` appealing. The game's modern military setting and helicopter-based combat will also attract fans of aerial combat games and those with an interest in military hardware and tactics. `AI Strike` places a strong emphasis on its single-player, story-focused campaign, engaging players with a rich narrative and immersive world, making it particularly appealing to those who value deep storytelling and memorable characters in their gaming experiences.
 
 ## Platforms
-PC, Linux, Mac, Steam, Itch.io
+Windows, Linux, Mac, Steam, Itch.io
