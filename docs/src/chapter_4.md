@@ -53,3 +53,33 @@ As players progress through Stage 3, they will be challenged to adapt to the uni
 In addition to engaging in intense firefights, players will be tasked with gathering intelligence on the group's plans, sabotaging their operations, and preventing them from executing their sinister plot to poison Victoria's water reserve. The player's success in these missions will rely on their ability to navigate the unforgiving terrain, adapt to the Outback Anarchists' unconventional tactics, and ultimately put an end to their reign of terror.
 
 ## Plot
+
+### Stage 1: Post-War Iraq
+
+1. **Reconnaissance and Patrol**: Players start by exploring the war-torn landscape of Iraq, familiarizing themselves with the terrain and locating remnants of the Republican Guard. This shorter mission involves scouting enemy positions, gathering intelligence, and assessing the situation on the ground.
+
+2. **Supply Line Sabotage**: Players are tasked with disrupting enemy supply lines, cutting off their access to weapons and resources. Players must locate and destroy convoys carrying supplies, while also engaging in firefights with enemy forces guarding these vital routes.
+
+3. **Communication Breakdown**: To further weaken the enemy's coordination and control, players must infiltrate and destroy key communication installations used by the remnants of the Republican Guard. This mission involves stealth and precision, as players navigate heavily guarded areas and eliminate high-value targets responsible for maintaining enemy communications.
+
+4. **Operation: Final Strike**: In this explosive conclusion, players lead an all-out assault on the enemy's stronghold, where the remaining Republican Guard forces have dug in and fortified their positions. Players must fight through waves of enemies, dismantle their defenses, and capture the enemy leader to bring an end to the rebellion and restore stability to the region.
+
+### Stage 2: Eastern Europe
+
+1. **Scouting the Frontlines**: In this shorter introductory mission, players explore the post-Soviet Eastern European landscape, gathering intelligence on the Iron Wolves Brigade's activities and locations. Players must identify key installations and assess the enemy's capabilities, including their Soviet-era technology and weaponry.
+
+2. **Securing the WMDs**: As tensions escalate, players are tasked with intercepting a shipment of WMDs supplied by rogue Russian General Nikolai Petrovich. Players must track down and secure the weapons before they can be used by the Iron Wolves Brigade, engaging in intense firefights with well-trained enemy forces along the way.
+
+3. **Disrupting the Chain of Command**: In this critical mission, players target the Iron Wolves Brigade's leadership, aiming to capture or eliminate key officers and disrupt the group's operations. Navigating heavily fortified areas and facing fierce resistance, players must use their wits and firepower to dismantle the enemy's command structure.
+
+4. **Battle for Control**: The stage culminates in an all-out battle against the Iron Wolves Brigade and the rogue Russian General. Players lead a massive assault on the enemy's stronghold, fighting through waves of heavily armed adversaries and their Soviet-era equipment. In a thrilling climax, players must confront General Nikolai Petrovich, put an end to the Iron Wolves Brigade, and prevent further destabilization in the region.
+
+### Stage 3: Australia
+
+1. **Outback Reconnaissance**: In this shorter introductory mission, players arrive in the Australian outback and begin to explore the terrain. They must familiarize themselves with the unique challenges of the environment, gather intel on the Outback Anarchists' activities, and identify potential targets for future operations.
+
+2. **Sabotage in the High Country**: As tensions rise, players must infiltrate the Outback Anarchists' operations in the High Country, disrupting their plans and resources. Players will face off-road challenges and cunning tactics from the enemy as they seek to destroy their infrastructure and weaken their capabilities.
+
+3. **Gippsland Standoff**: Players are tasked with preventing the Outback Anarchists from poisoning the water supply in the Gippsland region. In this high-stakes mission, players must navigate the rugged terrain, engage in intense firefights with the enemy, and ultimately foil the Anarchists' plot, saving countless lives.
+
+4. **Assault on the Yarra Valley**: The stage reaches its explosive conclusion as players launch a decisive assault on the Outback Anarchists' stronghold in the Yarra Valley. Facing the group's most resourceful and tenacious members, players must fight through waves of enemies, capture the group's leaders, and put an end to the Outback Anarchists' reign of terror.
