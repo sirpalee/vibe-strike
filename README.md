@@ -1,17 +1,9 @@
-# ai-strike
+# vibe-strike
 A spritual successor to the "Strike" series developed with the help of AI technologies
-
-# Streaming schedule
-Development of the project is streamed on [youtube](https://www.youtube.com/sirpalee).
-
-One one-hour slots starting Monday to Friday (Australia) at:
-- 12PM AEDT / 6PM PDT
-
-Real-life work and personal events can lead to fluctuations in a streaming schedule, as unexpected obligations and shifting priorities demand attention and flexibility.
 
 # Goals
 
-- Establish cutting-edge methodologies for leveraging AI tools in the development of compact, real-world projects.
+- Establish methodologies for leveraging AI tools in the development of compact, real-world projects.
 - Assess the potential of Large Language Models (LLMs) to support development processes, including:
     - Auto-generation of code examples, streamlining access to relevant information.
     - Identification and troubleshooting of code issues and bugs.
@@ -28,19 +20,12 @@ Real-life work and personal events can lead to fluctuations in a streaming sched
     - Utilization of ML models for procedural level design.
 - Determine the extent to which AI serves as a "force-multiplier" for small teams or solo developers.
 
-# Anti-Goals
-
-- Avoid relying solely on AI for code development.
-- Refrain from generating all assets exclusively through AI.
-
 # Tech stack
 
-- Chat GPT / Copilot (X) as the pair-programmer.
+- Cursor and Claude as the executor of plans.
 - Latest version of stable diffusion.
-- Amazon polly for voices.
-- Rust 2021.
-- WGPU/WGSL.
-- From scratch engine + ECS.
+- Three.js for the rendering engine backend.
+- GLTF for mesh data.
 
 # Why
 
