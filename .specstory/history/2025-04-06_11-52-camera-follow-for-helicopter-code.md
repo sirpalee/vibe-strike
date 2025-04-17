@@ -4121,7 +4121,277 @@ I'll remove the unused debugGroundMaterial from both files:
 
 ---
 
+<details>
+            <summary>Grep search for "debugGround" • **1** files</summary>
+        
+| File | Line | Match |
+|------|------|-------|
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L1351 | `+     const debugGroundGeometry = new THREE.PlaneGeometry(2000, 2000); // Much larger ground plane` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L1352 | `+     const debugGroundMaterial = new THREE.MeshBasicMaterial({` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L1356 | `+     const debugGround = new THREE.Mesh(debugGroundGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L1357 | `+     debugGround.rotation.x = -Math.PI / 2; // Rotate to be horizontal` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L1358 | `+     debugGround.position.y = -0.1; // Slightly below the deformed terrain` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L1359 | `+     scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2019 | `scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2072 | `-     const debugGroundGeometry = new THREE.PlaneGeometry(2000, 2000); // Much larger ground plane` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2073 | `+     const debugGroundGeometry = new THREE.PlaneGeometry(200, 200); // Match terrain size` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2074 | `const debugGroundMaterial = new THREE.MeshBasicMaterial({` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2080 | `const debugGround = new THREE.Mesh(debugGroundGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2710 | `const debugGround = new THREE.Mesh(debugGroundGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2711 | `debugGround.rotation.x = -Math.PI / 2; // Rotate to be horizontal` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2712 | `-     debugGround.position.y = -0.1; // Slightly below the deformed terrain` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2713 | `+     debugGround.position.y = -0.2; // Slightly below the deformed terrain` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2714 | `scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2737 | `scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2865 | `+ export const debugGroundMaterial = new THREE.MeshBasicMaterial({` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2899 | `+     debugGroundMaterial,` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2912 | `const debugGroundGeometry = new THREE.PlaneGeometry(200, 200); // Match terrain size` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2913 | `-     const debugGroundMaterial = new THREE.MeshBasicMaterial({` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2918 | `const debugGround = new THREE.Mesh(debugGroundGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2919 | `debugGround.rotation.x = -Math.PI / 2; // Rotate to be horizontal` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L2945 | `- `debugGroundMaterial` for the reference plane` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3012 | `debugGroundMaterial,` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3055 | `export const debugGroundMaterial = new THREE.MeshBasicMaterial({` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3071 | `-     const debugGroundGeometry = new THREE.PlaneGeometry(200, 200); // Match terrain size` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3073 | `+     const debugGroundGeometry = new THREE.PlaneGeometry(200, 200, 50, 50); // Lower resolution for wireframe` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3074 | `+     const debugPositions = debugGroundGeometry.attributes.position;` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3086 | `+     debugGroundGeometry.computeVertexNormals();` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3088 | `const debugGround = new THREE.Mesh(debugGroundGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3089 | `debugGround.rotation.x = -Math.PI / 2; // Rotate to be horizontal` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3090 | `-     debugGround.position.y = -0.2; // Slightly below the deformed terrain` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3091 | `+     debugGround.position.y = 0; // At the same level as the terrain` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3092 | `scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3231 | `scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3382 | `-     const debugGroundGeometry = new THREE.PlaneGeometry(200, 200, 50, 50); // Lower resolution for wireframe` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3383 | `-     const debugPositions = debugGroundGeometry.attributes.position;` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3398 | `-     debugGroundGeometry.computeVertexNormals();` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3409 | `-     const debugGround = new THREE.Mesh(debugGroundGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3410 | `-     debugGround.rotation.x = -Math.PI / 2; // Rotate to be horizontal` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3411 | `-     debugGround.position.y = 0; // At the same level as the terrain` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3412 | `+     const debugGround = new THREE.Mesh(debugGridGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3413 | `+     debugGround.rotation.x = -Math.PI / 2;` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3414 | `scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3472 | `export const debugGroundMaterial = new THREE.MeshBasicMaterial({` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3578 | `-     const debugGround = new THREE.Mesh(debugGridGeometry, debugGroundMaterial);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3579 | `-     debugGround.rotation.x = -Math.PI / 2;` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L3580 | `-     scene.add(debugGround);` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L4093 | `I'll remove the unused debugGroundMaterial from both files:` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L4100 | `-     debugGroundMaterial,` |
+| `file:///c%3A/projects/vibe-strike/.specstory/history/2025-04-06_11-52-camera-follow-for-helicopter-code.md` | L4112 | `- export const debugGroundMaterial = new THREE.MeshBasicMaterial({` |
 
+</details>
+
+---
+
+Read file: js/scene.js
+
+---
+
+I've removed the debugGroundMaterial from the project:
+
+1. Removed from materials.js:
+   - Deleted the entire definition of the debugGroundMaterial
+
+2. Removed from scene.js:
+   - Removed it from the import list at the top of the file
+
+There's no more reference to debugGroundMaterial or debugGround in the active code. The terrain generation now uses just the main terrainMaterial for the solid terrain and wireframeMaterial for the wireframe overlay.
+
+This simplifies the code by removing an unused material that was likely left over from earlier debugging efforts. The scene setup is now more streamlined with only the materials that are actively being used.
+
+---
+
+_**User**_
+
+Make the helicopter respect the height of the ground material. It should hover above it all the times.
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+I'll modify the code to make the helicopter hover above the terrain at all times:
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/scene.js
+
+---
+
+Read file: js/procedurals.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/scene.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/scene.js
+
+---
+
+Could not find file 'js/terrain.js' in the workspace.
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/scene.js
+
+---
+
+Could not find file 'js/terrain.js' in the workspace.
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Could not find file 'js/terrain.js' in the workspace.
+
+---
+
+<details>
+            <summary>Searched codebase "terrain" • **0** results</summary>
+        
+No results found
+</details>
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/main.js
+
+---
+
+Read file: js/scene.js
+
+---
+
+Read file: js/procedurals.js
+
+---
+
+Read file: js/main.js
+
+---
+
+
+
+
+
+---
+
+Cancelled
+
+---
+
+_**User**_
+
+Change the helicopter's height all the time, so it is the terrain height (which is sandDuneNoise) + 10.
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+I'll modify the code to make the helicopter hover above the terrain at all times by updating the y-position based on the terrain height.
+
+---
+
+```diff
+  import { createScene } from './scene.js';
+  import { defaultSettings, getDefaultSettings } from './settings.js';
++ import { sandDuneNoise } from './procedurals.js';
+  
+  // Create scene
+          model.position.add(currentVelocity.clone().multiplyScalar(deltaTime));
+  
+-         // Ensure helicopter maintains its height
+-         model.position.y = helicopterHeight;
++         // Ensure helicopter maintains its height above the terrain
++         // Calculate terrain height at current position using sandDuneNoise
++         const terrainHeight = sandDuneNoise(model.position.x, model.position.z);
++         // Set helicopter height to be terrain height + constant offset
++         model.position.y = terrainHeight + helicopterHeight;
+          
+          // Update camera position to follow helicopter but maintain fixed orientation
+```
+
+---
+
+Now the helicopter will dynamically adjust its height based on the terrain below. I've made these changes:
+
+1. Imported the `sandDuneNoise` function from the procedurals.js module at the top of the file
+2. Replaced the static height setting with dynamic terrain-based height calculation:
+   - Calculate the terrain height at the helicopter's current x,z position using `sandDuneNoise`
+   - Set the helicopter's y-position to be the terrain height plus the fixed offset (10 units)
+   
+This way, as the helicopter moves around the terrain, it will maintain a constant height of 10 units above the ground, following the terrain contours of hills and valleys defined by the sandDuneNoise function.
 
 ---
 

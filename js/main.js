@@ -3,6 +3,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { simpleDiffuse } from './materials.js';
 import { createScene } from './scene.js';
 import { defaultSettings, getDefaultSettings } from './settings.js';
+import { sandDuneNoise } from './procedurals.js';
 
 // Create scene
 const scene = createScene();
@@ -515,8 +516,11 @@ function animate(time) {
         // Apply movement velocity
         model.position.add(currentVelocity.clone().multiplyScalar(deltaTime));
 
-        // Ensure helicopter maintains its height
-        model.position.y = helicopterHeight;
+        // Ensure helicopter maintains its height above the terrain
+        // Calculate terrain height at current position using sandDuneNoise
+        const terrainHeight = sandDuneNoise(model.position.x, model.position.z);
+        // Set helicopter height to be terrain height + constant offset
+        model.position.y = terrainHeight + helicopterHeight;
         
         // Update camera position to follow helicopter but maintain fixed orientation
         // Simply add the initial offset to the helicopter position without rotation
