@@ -7,8 +7,8 @@ else
     PYTHON_CMD="python"
 fi
 
-# Start the Python HTTP server in the background
-$PYTHON_CMD -m http.server 8000 &
+# Start the no-cache Python HTTP server in the background
+$PYTHON_CMD nocache_server.py &
 SERVER_PID=$!
 
 # Wait a moment for the server to start

@@ -393,6 +393,10 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
+// Camera follow variables
+const initialCameraOffset = new THREE.Vector3(0, 20, -20); // Offset from helicopter (higher and behind)
+const initialViewDirection = new THREE.Vector3(0, -20, 20).normalize(); // Initial viewing direction vector
+
 // Animation loop
 function animate(time) {
     requestAnimationFrame(animate);
@@ -505,6 +509,13 @@ function animate(time) {
 
         // Ensure helicopter maintains its height
         model.position.y = helicopterHeight;
+        
+        // Update camera position to follow helicopter but maintain fixed orientation
+        // Simply add the initial offset to the helicopter position without rotation
+        camera.position.copy(model.position).add(initialCameraOffset);
+        
+        // Make camera look at helicopter
+        camera.lookAt(model.position);
     }
 
     renderer.render(scene, camera);
