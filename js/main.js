@@ -8,13 +8,15 @@ import { defaultSettings, getDefaultSettings } from './settings.js';
 const scene = createScene();
 
 // Create camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(0, 30, -20); // Position camera higher up and back
-camera.lookAt(0, 10, 0); // Look at where the helicopter will be
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+camera.position.set(0, 30, -20); // Restore original camera position
+camera.lookAt(0, 10, 0); // Restore original look-at point
 
 // Create renderer
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.shadowMap.enabled = true; // Enable shadow mapping
+renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Use soft shadows
 document.body.appendChild(renderer.domElement);
 
 // Load GLTF model
@@ -370,6 +372,7 @@ loader.load(
 
         // Scale the model if needed
         // model.scale.set(0.5, 0.5, 0.5);
+        model.castShadow = true; // Enable shadow casting for helicopter
 
         scene.add(model);
 
@@ -394,8 +397,8 @@ function onWindowResize() {
 }
 
 // Camera follow variables
-const initialCameraOffset = new THREE.Vector3(0, 20, -20); // Offset from helicopter (higher and behind)
-const initialViewDirection = new THREE.Vector3(0, -20, 20).normalize(); // Initial viewing direction vector
+const initialCameraOffset = new THREE.Vector3(0, 20, -20); // Restore original offset
+const initialViewDirection = new THREE.Vector3(0, -10, 10).normalize(); // Restore original view direction
 
 // Animation loop
 function animate(time) {

@@ -37,5 +37,18 @@ export const groundMaterial = new THREE.MeshStandardMaterial({
 
 // Create reference cube material
 export const cubeMaterial = new THREE.MeshStandardMaterial({
-    color: 0xFF0000
+    color: 0xFF0000,
+    emissive: 0x440000, // Slight glow for better visibility
+    roughness: 0.7,
+    metalness: 0.3
+});
+
+// Create sand terrain material with enhanced visualization
+export const sandMaterial = new THREE.MeshPhongMaterial({
+    color: 0xDCB877, // Desert sand color
+    specular: 0x222222, // Slight specular highlights
+    shininess: 5, // Low shininess for natural look
+    side: THREE.DoubleSide, // Make visible from both sides
+    flatShading: true, // Use flat shading to enhance visibility of terrain shape
+    vertexColors: true // Enable vertex coloring for height-based coloring
 }); 
