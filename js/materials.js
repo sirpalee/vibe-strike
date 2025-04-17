@@ -28,13 +28,6 @@ export const simpleDiffuse = new THREE.ShaderMaterial({
     `
 });
 
-// Create ground material
-export const groundMaterial = new THREE.MeshStandardMaterial({
-    color: 0xD2B48C, // Desert/sand color
-    roughness: 0.8,
-    metalness: 0.1
-});
-
 // Create reference cube material
 export const cubeMaterial = new THREE.MeshStandardMaterial({
     color: 0xFF0000,
@@ -43,11 +36,25 @@ export const cubeMaterial = new THREE.MeshStandardMaterial({
     metalness: 0.3
 });
 
-// Create sand terrain material with enhanced visualization
-export const sandMaterial = new THREE.MeshPhongMaterial({
-    color: 0xDCB877, // Desert sand color
-    specular: 0x222222, // Slight specular highlights
-    shininess: 5, // Low shininess for natural look
-    side: THREE.DoubleSide, // Make visible from both sides
-    flatShading: true // Use flat shading to enhance visibility of terrain shape
+// Debug ground material for flat reference surface
+export const debugGroundMaterial = new THREE.MeshBasicMaterial({ 
+    color: 0x444444, // Dark gray for better contrast
+    side: THREE.DoubleSide, // Visible from both sides
+    wireframe: true // Show as wireframe
+});
+
+// Terrain material for the deformed ground - simple, solid material
+export const terrainMaterial = new THREE.MeshLambertMaterial({
+    color: 0xE6C88E, // Light sand color
+    side: THREE.DoubleSide // Ensure both sides are visible
+});
+
+// Light sphere material to mark light positions
+export const lightSphereMaterial = new THREE.MeshBasicMaterial({ 
+    color: 0xffff00 // Yellow for visibility
+});
+
+// Red pole material for origin marker
+export const poleMaterial = new THREE.MeshStandardMaterial({ 
+    color: 0xff0000 // Red
 }); 

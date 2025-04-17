@@ -13,10 +13,15 @@ camera.position.set(0, 30, -20); // Restore original camera position
 camera.lookAt(0, 10, 0); // Restore original look-at point
 
 // Create renderer
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ 
+    antialias: true,
+    alpha: false // Ensure alpha is disabled
+});
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true; // Enable shadow mapping
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Use soft shadows
+renderer.setClearColor(0x87CEEB, 1); // Set clear color to sky blue
+renderer.outputEncoding = THREE.sRGBEncoding; // Use sRGB color space for better appearance
 document.body.appendChild(renderer.domElement);
 
 // Load GLTF model

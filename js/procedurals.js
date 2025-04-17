@@ -11,23 +11,20 @@
  */
 export function sandDuneNoise(x, z) {
     // Create multi-octave noise for more natural looking dunes
-    const scale1 = 0.02;  // Adjusted for smaller terrain - large scale dunes
-    const scale2 = 0.05;  // Adjusted for smaller terrain - medium scale features
-    const scale3 = 0.2;   // Adjusted for smaller terrain - small details
+    const scale1 = 0.02;  // Large scale dunes
+    const scale2 = 0.05;  // Medium scale features
+    const scale3 = 0.2;   // Small details scale
     
-    // Use sine waves with amplified values for more pronounced dunes
+    // Use sine waves with more reasonable amplitudes
     let y = 0;
-    // Large dunes
-    y += 8.0 * Math.sin(x * scale1) * Math.cos(z * scale1 * 1.1);
+    // Large dunes - moderate height
+    y += 5.0 * Math.sin(x * scale1) * Math.cos(z * scale1 * 1.1);
     // Medium features
-    y += 3.0 * Math.sin(x * scale2 * 1.3 + 0.5) * Math.cos(z * scale2 * 0.7 + 0.5);
+    y += 2.0 * Math.sin(x * scale2 * 1.3 + 0.5) * Math.cos(z * scale2 * 0.7 + 0.5);
     // Small details
-    y += 1.0 * Math.sin(x * scale3 * 0.9 + 1.0) * Math.cos(z * scale3 * 1.1 + 1.0);
+    y += 0.5 * Math.sin(x * scale3 * 0.9 + 1.0) * Math.cos(z * scale3 * 1.1 + 1.0);
     
-    // Add some additional randomization for more natural look
-    y += Math.sin(x * 0.3 + z * 0.2) * 0.5;
-    
-    // Total height is now up to 12.5m
+    // Limit the total height to about 8 meters maximum
     return y;
 }
 
