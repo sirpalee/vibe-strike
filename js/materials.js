@@ -49,6 +49,5 @@ export const sandMaterial = new THREE.MeshPhongMaterial({
     specular: 0x222222, // Slight specular highlights
     shininess: 5, // Low shininess for natural look
     side: THREE.DoubleSide, // Make visible from both sides
-    flatShading: true, // Use flat shading to enhance visibility of terrain shape
-    vertexColors: true // Enable vertex coloring for height-based coloring
+    flatShading: true // Use flat shading to enhance visibility of terrain shape
 }); 

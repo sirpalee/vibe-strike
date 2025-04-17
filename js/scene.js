@@ -1,29 +1,6 @@
 import * as THREE from 'three';
 import { groundMaterial, cubeMaterial, sandMaterial } from './materials.js';
-
-// More pronounced noise function for height with amplified features
-// Moved to outer scope so it can be used by both createScene and createReferenceCube
-function noise(x, z) {
-    // Create multi-octave noise for more natural looking dunes
-    const scale1 = 0.02;  // Adjusted for smaller terrain - large scale dunes
-    const scale2 = 0.05;  // Adjusted for smaller terrain - medium scale features
-    const scale3 = 0.2;   // Adjusted for smaller terrain - small details
-    
-    // Use sine waves with amplified values for more pronounced dunes
-    let y = 0;
-    // Large dunes
-    y += 8.0 * Math.sin(x * scale1) * Math.cos(z * scale1 * 1.1);
-    // Medium features
-    y += 3.0 * Math.sin(x * scale2 * 1.3 + 0.5) * Math.cos(z * scale2 * 0.7 + 0.5);
-    // Small details
-    y += 1.0 * Math.sin(x * scale3 * 0.9 + 1.0) * Math.cos(z * scale3 * 1.1 + 1.0);
-    
-    // Add some additional randomization for more natural look
-    y += Math.sin(x * 0.3 + z * 0.2) * 0.5;
-    
-    // Total height is now up to 12.5m
-    return y;
-}
+import { sandDuneNoise } from './procedurals.js';
 
 // Set up scene function
 export function createScene() {
@@ -84,13 +61,13 @@ export function createScene() {
     // Apply procedural deformation for sand dunes - with doubled heights
     const positions = groundGeometry.attributes.position;
     
-    // Apply height to vertices using the noise function in outer scope
+    // Apply height to vertices using the sandDuneNoise function imported from procedurals.js
     for (let i = 0; i < positions.count; i++) {
         const x = positions.getX(i);
         const z = positions.getZ(i);
         
-        // Set the Y value directly with the noise function
-        positions.setY(i, noise(x, z));
+        // Set the Y value directly with the sandDuneNoise function
+        positions.setY(i, sandDuneNoise(x, z));
     }
     
     // Mark the position attribute as needing update
@@ -98,36 +75,6 @@ export function createScene() {
     
     // Need to update normals for proper lighting
     groundGeometry.computeVertexNormals();
-    
-    // Create color variations based on height for better visual cues
-    const colors = new Float32Array(positions.count * 3);
-    
-    for (let i = 0; i < positions.count; i++) {
-        const y = positions.getY(i);
-        // Normalize height to 0-1 range approximately
-        const heightRatio = (y + 2) / 14; 
-        
-        // Create color gradient based on height
-        if (heightRatio < 0.3) {
-            // Lower areas - darker
-            colors[i * 3] = 0.7; // R
-            colors[i * 3 + 1] = 0.5; // G
-            colors[i * 3 + 2] = 0.3; // B
-        } else if (heightRatio < 0.7) {
-            // Mid-level areas - medium
-            colors[i * 3] = 0.9; // R
-            colors[i * 3 + 1] = 0.75; // G
-            colors[i * 3 + 2] = 0.5; // B
-        } else {
-            // Higher areas - lighter
-            colors[i * 3] = 1.0; // R
-            colors[i * 3 + 1] = 0.9; // G
-            colors[i * 3 + 2] = 0.7; // B
-        }
-    }
-    
-    // Add color attribute to geometry
-    groundGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
     
     // Create the terrain mesh with the prepared material
     const ground = new THREE.Mesh(groundGeometry, sandMaterial);
@@ -159,8 +106,8 @@ function createReferenceCube(scene, x, z) {
     const cubeGeometry = new THREE.BoxGeometry(3, 6, 3); // Taller cubes (6m) for better visibility
     const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
     
-    // Get the height at this position by sampling our noise function from the outer scope
-    const y = noise(x, z);
+    // Get the height at this position by sampling the sandDuneNoise function
+    const y = sandDuneNoise(x, z);
     
     // Position cube on ground with base at terrain height
     cube.position.set(x, y + 3, z); // Half height above terrain
