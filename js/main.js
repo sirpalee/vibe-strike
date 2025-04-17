@@ -8,7 +8,7 @@ import { defaultSettings, getDefaultSettings } from './settings.js';
 const scene = createScene();
 
 // Create camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 5000); // Increased far plane for 2km terrain
 camera.position.set(0, 30, -20); // Restore original camera position
 camera.lookAt(0, 10, 0); // Restore original look-at point
 

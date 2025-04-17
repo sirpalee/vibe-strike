@@ -36,11 +36,12 @@ export const cubeMaterial = new THREE.MeshStandardMaterial({
     metalness: 0.3
 });
 
-// Debug ground material for flat reference surface
-export const debugGroundMaterial = new THREE.MeshBasicMaterial({ 
-    color: 0x444444, // Dark gray for better contrast
-    side: THREE.DoubleSide, // Visible from both sides
-    wireframe: true // Show as wireframe
+// Terrain wireframe overlay material
+export const wireframeMaterial = new THREE.MeshBasicMaterial({
+    color: 0x000000, // Black
+    wireframe: true,
+    transparent: true,
+    opacity: 0.3
 });
 
 // Terrain material for the deformed ground - simple, solid material

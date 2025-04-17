@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { 
     cubeMaterial, 
-    debugGroundMaterial, 
     terrainMaterial, 
     lightSphereMaterial, 
-    poleMaterial 
+    poleMaterial,
+    wireframeMaterial
 } from './materials.js';
 import { sandDuneNoise } from './procedurals.js';
 
@@ -45,8 +45,8 @@ export function createScene() {
     scene.add(lightSphere);
 
     // Create terrain - using the simplest possible approach
-    const terrainSize = 200;
-    const terrainSegments = 100;
+    const terrainSize = 2000; // Increased to 2km
+    const terrainSegments = 500; // Increased to 500 segments
     const terrainGeometry = new THREE.PlaneGeometry(
         terrainSize, 
         terrainSize, 
@@ -58,13 +58,18 @@ export function createScene() {
     const positionAttribute = terrainGeometry.getAttribute('position');
     const posArray = positionAttribute.array;
     
+    // Fix the coordinate order for proper deformation
     for (let i = 0; i < posArray.length; i += 3) {
-        const x = posArray[i];
-        const z = posArray[i + 1];
-        posArray[i + 2] = sandDuneNoise(x, z);
+        // In THREE.js, vertices are stored as (x,y,z) triplets
+        const x = posArray[i];        // x is at index i
+        const y = posArray[i + 1];    // z is at index i+2
+        
+        // Apply the height function to the y-coordinate (height)
+        posArray[i + 2] = sandDuneNoise(x, y);
     }
     
-    // positionAttribute.needsUpdate = true;
+    // Mark position attribute as needing update
+    positionAttribute.needsUpdate = true;
     terrainGeometry.computeVertexNormals();
     
     // Create solid terrain mesh
@@ -74,13 +79,6 @@ export function createScene() {
     scene.add(terrain);
     
     // Create wireframe overlay for the same geometry
-    const wireframeMaterial = new THREE.MeshBasicMaterial({
-        color: 0x000000,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.3
-    });
-    
     const wireframe = new THREE.Mesh(
         // Clone the geometry to avoid sharing material settings
         terrainGeometry.clone(),
@@ -92,11 +90,12 @@ export function createScene() {
 
     // Add reference cubes to show terrain height
     const referenceCubes = [];
-    for (let x = -80; x <= 80; x += 40) {
-        for (let z = -80; z <= 80; z += 40) {
+    // Place cubes every 400m in the 2km terrain
+    for (let x = -800; x <= 800; x += 400) {
+        for (let z = -800; z <= 800; z += 400) {
             if (x !== 0 || z !== 0) { // Skip center position where helicopter will be
-                const cubeSize = 3;
-                const cubeHeight = 6;
+                const cubeSize = 30; // Size for visibility on larger terrain
+                const cubeHeight = 6; // Original height (reduced back from 60)
                 const cubeGeometry = new THREE.BoxGeometry(cubeSize, cubeHeight, cubeSize);
                 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
                 
